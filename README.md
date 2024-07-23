@@ -15,6 +15,6 @@ Violaciones de SOLID identificadas
   y se debe definir la abstracción correspondiente del método generateReport.
 - La clase ReportGenerato También viola el principio de Inversión de dependencias,
   ya que debería depender de la abstracción EmployeeOperations, en lugar de depender de la implementación EmployeeManager
-- En la clase PartTimeEmployee se viola el principio de Sustitución de Liskov donde se esta haciendo la sobre escritura de
+- En la clase PartTimeEmployee se viola el principio de Sustitución de Liskov donde se esta hace la sobre escritura
   de un método y se lanza una excepción
  
