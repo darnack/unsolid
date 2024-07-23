@@ -17,4 +17,6 @@ Violaciones de SOLID identificadas
   ya que debería depender de la abstracción EmployeeOperations, en lugar de depender de la implementación EmployeeManager
 - En la clase PartTimeEmployee se viola el principio de Sustitución de Liskov donde se esta hace la sobre escritura
   de un método y se lanza una excepción
+- La interfaz EmployeeOperations viola el principio ISP y el pincipio al agrupar diversas funcionalidades
+  (agregar, eliminar, calcular salarios, guardar en archivos).
  
