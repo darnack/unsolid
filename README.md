@@ -14,5 +14,7 @@ Violaciones de SOLID identificadas
   Debe implementar las diferentes estrategias de generación del reporte en clases independientes,
   y se debe definir la abstracción correspondiente del método generateReport.
 - La clase ReportGenerato También viola el principio de Inversión de dependencias,
-  ya que debería depender de la abstracción EmployeeOperations, en lugar de depender de la implementación EmployeeManager 
+  ya que debería depender de la abstracción EmployeeOperations, en lugar de depender de la implementación EmployeeManager
+- En la clase PartTimeEmployee se viola el principio de Sustitución de Liskov donde se esta haciendo la sobre escritura de
+  de un método y se lanza una excepción
  
