@@ -1,22 +1,24 @@
-Actividad SOLID
+# Ejercicio SOLID
 
-Integrantes:
+## Integrantes: 
 - Cristian Quesada Cossio
 - Daniel Santiago Melo Suarez
 - Elkin Eduardo Lesmes Vallejo
-- Yesid Giovanny Sanabria Orjuela
 - Fredy Alberto Gomez Ramirez
+- Yesid Giovanny Sanabria Orjuela
 
-Violaciones de SOLID identificadas
-- La clase SalaryCalculator viola el principio de Inversión de dependencias,
-  ya que debería depender de la abstracción EmployeeOperations, en lugar de depender de la implementación EmployeeManager.
-- La clase ReportGenerator viola el principio open/close.
-  Debe implementar las diferentes estrategias de generación del reporte en clases independientes,
-  y se debe definir la abstracción correspondiente del método generateReport.
-- La clase ReportGenerato También viola el principio de Inversión de dependencias,
-  ya que debería depender de la abstracción EmployeeOperations, en lugar de depender de la implementación EmployeeManager
-- En la clase PartTimeEmployee se viola el principio de Sustitución de Liskov donde se esta hace la sobre escritura
-  de un método y se lanza una excepción
-- La interfaz EmployeeOperations viola el principio ISP y el pincipio al agrupar diversas funcionalidades
-  (agregar, eliminar, calcular salarios, guardar en archivos).
- 
+## Análisis principios solid
+- **Single responsability**
+    - La clase EmployeeManager tiene múltiples responsabilidades (administrar empleados, calcular salarios y generar reportes).
+    
+- **Open / Close**
+    - La clase ReportGenerator tiene la definición específica para la generación de múltiples tipos de reportes, lo cual hace que esté abierta a modificaciones cuando exista un nuevo tipo de reporte. 
+    
+- **Liskov substitution**
+    - La clase PartTimeEmployee sobreescribe la funcionalidad del método getName de Employee inyectando una excepción, ya que este no tiene una implementación de dicho método. 
+    
+- **Interface segregation**
+    - La clase EmployeeOperations define métodos que no necesariamente aplican para las operaciones con empleador. calculateSalary y saveToFile son operaciones que pueden definirse en otra abstracción.
+    
+- **Dependency inversion**
+    - La clase ReportGenerator es una dependencia que no está abstraída. Si se definieran múltiples generadores de reportes para múltiples formatos, se tendría que generar la instancia del objeto explícito en lugar de depender de su abstracción. 
