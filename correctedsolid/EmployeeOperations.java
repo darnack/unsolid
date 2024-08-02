@@ -1,9 +1,12 @@
 package com.example.demo.unsolid;
 
-public interface EmployeeOperations {
+public class EmployeeOperations implements IEmployeeOperations {
 
-    void addEmployee(String name);
+    public void addEmployee(String name) {
+        // Agregar empleado
+    }
 
-    void removeEmployee(String name);
-
+    public void removeEmployee(String name) {
+        // Eliminar empleado
+    }
 }
