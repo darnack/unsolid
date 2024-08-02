@@ -24,5 +24,5 @@
     - La clase ReportGenerator es una dependencia que no está abstraída. Si se definieran múltiples generadores de reportes para múltiples formatos, se tendría que generar la instancia del objeto explícito en lugar de depender de su abstracción. 
 
 ## Correciones
-EmployeeManager Violaba SRP: Se atomizaron las responsabilidades de esta clase creado las abstracciones IEmployeeOperations, ISalaryOperations, y dejando el método saveToFile como parte de IReportGenerator
-SalaryCalculator Violaba DIP (depende directamente de la implementación de EmployeeManager): SalaryCalculator ahora depende de la abstracción ISalaryoperations en lugar de EmployeeManager.
+- EmployeeManager Violaba SRP: Se atomizaron las responsabilidades de esta clase creado las abstracciones IEmployeeOperations, ISalaryOperations, y dejando el método saveToFile como parte de IReportGenerator.
+- SalaryCalculator Violaba DIP (depende directamente de la implementación de EmployeeManager): SalaryCalculator ahora depende de la abstracción ISalaryoperations en lugar de EmployeeManager.
